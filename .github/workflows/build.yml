@@ -10,7 +10,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build Docker image
-        run: docker build -t my-image .
+        run: docker build -t sub2clash .
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
@@ -18,5 +18,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push Docker image
         run: |
-          docker tag my-image ${{ secrets.DOCKER_USERNAME }}/my-image:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-image:latest
+          docker tag sub2clash ${{ secrets.DOCKER_USERNAME }}/sub2clash:latest
+          docker tag sub2clash ${{ secrets.DOCKER_USERNAME }}/sub2clash:0.1.0
+          docker push ${{ secrets.DOCKER_USERNAME }}/sub2clash:latest
