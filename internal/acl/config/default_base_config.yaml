@@ -56,8 +56,11 @@ rules:
 
   # GeoIP China
   - GEOIP,CN,DIRECT
+  
 
   # 自定义
   # - DOMAIN-KEYWORD,site.com,DIRECT
+  - DOMAIN-KEYWORD,zox.show,DIRECT
+  - DOMAIN-KEYWORD,play.acemby.org,DIRECT
 
   - MATCH,final
