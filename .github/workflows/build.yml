@@ -19,5 +19,5 @@ jobs:
       - name: Push Docker image
         run: |
           docker tag sub2clash ${{ secrets.DOCKER_USERNAME }}/sub2clash:latest
-          docker tag sub2clash ${{ secrets.DOCKER_USERNAME }}/sub2clash:0.1.0
+          docker tag sub2clash ${{ secrets.DOCKER_USERNAME }}/sub2clash:0.1.1
           docker push ${{ secrets.DOCKER_USERNAME }}/sub2clash:latest
